@@ -1,0 +1,52 @@
+<!-- Button trigger modal -->
+<div style="text-align: center; margin-top: 10px;">
+    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Add Student
+      </button>
+</div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-add-edit></app-add-edit>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+<div style="margin-left: 50px; margin-top:50px;">
+    <table class="table table-striped;" stly="text-align:center;">
+        <thead>
+            <tr>
+                <th>STUDENT ID</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>PLACE</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <tr *ngFor="let d of StudentList">
+                <td>{{d.StudentId}}</td>
+                <td>{{d.Name}}</td>
+                <td>{{d.Age}}</td>
+                <td>{{d.Place}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
